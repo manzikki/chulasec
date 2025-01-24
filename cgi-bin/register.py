@@ -35,7 +35,7 @@ else:
             # Success message
             print("<html><body>")
             print(f"<h1>Welcome, {username}! Registration successful.</h1>")
-            print('<a href="/login.html">Go to Login</a>')
+            print('<a href="/">Go to Login</a>')
             print("</body></html>")
         except Exception as e:
             # Handle any errors during file writing
