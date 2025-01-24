@@ -21,16 +21,16 @@ try:
     with open(PASSWORDS_FILE, "r") as file:
         for line in file:
             # Strip whitespace and split by the comma
-            username, password = line.strip().split(",")
+            u, p = line.strip().split(",")
             # Add to the dictionary
-            credentials[username] = password
+            credentials[u] = p
 except FileNotFoundError:
     print(f"Error: {PASSWORDS_FILE} not found.")
 except Exception as e:
     print(f"An error occurred: {e}")
 # Check the credentials
 
-if credentials[username] == password:
+if username in credentials and credentials[username] == password:
     # If login is successful, redirect to main.html
     print('<html><body>')
     print('<h1>Login successful!</h1>')
